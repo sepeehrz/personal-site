@@ -1,15 +1,12 @@
 import {defineModule} from '@core/Aplication/setup';
 import './assets/style/app.scss';
+import {setupComponents} from './components';
 
-export const uiProjectSetting = defineModule(({router}) => {
+export const uiProjectSetting = defineModule(({app, router}) => {
+  setupComponents(app);
   router.addRoute({
     name: 'main',
     path: '',
     component: () => import('./layout/defaultLayout.vue')
   });
-  // router.addRoute({
-  //   name: 'not-found',
-  //   path: '/:pathMatch(.*)*',
-  //   component: () => import('./layout/notFound.vue')
-  // });
 });

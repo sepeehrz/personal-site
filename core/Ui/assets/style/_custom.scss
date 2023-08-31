@@ -1,10 +1,10 @@
 :root {
-  --font-family: IRANSansX;
+  --font-family: 'Roboto', sans-serif;
 }
 
 html {
   font-size: 14px;
-  font-family: var(--font-family);
+  font-family: 'Roboto', sans-serif;
 }
 
 * {
@@ -18,11 +18,20 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   background-color: #f8f9fa;
+  font-family: 'Roboto', sans-serif;
 }
 
 input,
 textarea,
 select,
 button {
-  font-family: IRANSansX;
+  font-family: 'Roboto', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }

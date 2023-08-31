@@ -4,6 +4,6 @@ export default defineModule(({router}) => {
   router.addRoute('main', {
     name: 'Home',
     path: '',
-    component: () => import('./index.vue')
+    component: () => import('./views/index.vue')
   });
 });
