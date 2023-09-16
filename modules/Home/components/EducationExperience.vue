@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.wrapper">
-    <componentTitle title="education & experience" sub-title="quality" />
+    <componentTitle title="quality" />
     <div :class="$style.knows">
       <div :class="$style.education">
         <div :class="$style.title">My Education</div>
@@ -78,7 +78,8 @@
 <script lang="ts" setup></script>
 <style lang="scss" module>
   .wrapper {
-    padding-bottom: 50px;
+    padding: 50px 20%;
+    background-color: $white-color;
     .knows {
       display: flex;
       justify-content: space-between;
@@ -90,6 +91,7 @@
       .education {
       }
       .title {
+        color: $title-color;
         font-size: 35px;
         font-weight: bold;
       }
@@ -103,6 +105,7 @@
             font-size: 20px;
             font-weight: bold;
             position: relative;
+            color: $title-color;
             &::before {
               content: '';
               width: 15px;
@@ -116,7 +119,6 @@
           }
           .company {
             padding: 10px 0;
-            color: gray;
             font-size: 12px;
             .name {
               color: $primary-color;
@@ -124,12 +126,13 @@
               text-decoration: underline;
             }
             .date {
-              color: gray;
+              color: $text-color;
               padding-left: 5px;
             }
           }
           .description {
             line-height: 23px;
+            color: $primary-text-color;
           }
         }
       }

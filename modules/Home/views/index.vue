@@ -1,20 +1,25 @@
 <template>
-  <Banner />
+  <Banner id="home" />
   <div :class="$style.container">
-    <AboutMe />
-    <EducationExperience />
-    <Skills />
+    <EducationExperience id="experience" />
+    <WorkSamples id="projects" />
+    <Skills id="skills" />
   </div>
+  <ContactMe id="contact-me" />
 </template>
 <script lang="ts" setup>
   import Banner from '../components/Banner.vue';
   import AboutMe from '../components/AboutMe.vue';
   import EducationExperience from '../components/EducationExperience.vue';
   import Skills from '../components/Skills.vue';
+  import ContactMe from '../components/ContactMe.vue';
+  import WorkSamples from '../components/WorkSamples/Main.vue';
 </script>
 <style lang="scss" module>
   .container {
-    max-width: 1024px;
-    margin: 0 auto;
+    // overflow-y: auto;
+    // scroll-behavior: smooth;
+    // max-width: 1024px;
+    // margin: 0 20%;
   }
 </style>

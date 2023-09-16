@@ -23,7 +23,7 @@
 <style lang="scss" module>
   .slider {
     height: 100vh;
-    background: $primary-color;
+    background: linear-gradient(90deg, $primary-color 0, $secondary-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,7 +33,7 @@
       width: 50vw;
       align-items: center;
       justify-content: space-between;
-      color: #fff;
+      color: $white-color;
       .image {
         width: 400px;
         img {
@@ -46,21 +46,21 @@
         h1 {
           font-size: 60px;
           color: $primary-color;
-          -webkit-text-stroke: 1px #fff;
+          -webkit-text-stroke: 1px $white-color;
         }
         text-align: center;
         h3 {
           font-size: 30px;
         }
         .cv {
-          background-color: $primary-color;
-          color: #fff;
-          border: 1px solid #fff;
+          background-color: $white-color;
+          color: $white-color;
+          border: 1px solid $white-color;
           border-radius: 10px;
           padding: 10px 20px;
+          margin-top: 30px;
+          color: $title-color;
           &:hover {
-            background-color: #fff;
-            color: #000;
             cursor: pointer;
           }
         }
@@ -72,7 +72,7 @@
       left: 50%;
       transform: translateX(-50%);
       font-size: 40px;
-      color: #fff;
+      color: $white-color;
       animation: action 1s infinite alternate;
     }
   }

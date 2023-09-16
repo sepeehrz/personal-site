@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.aboutMe">
-    <componentTitle title="about me" sub-title="about" />
+    <componentTitle title="about" />
     <div :class="$style.aboutWrapper">
       <div :class="$style.image">
         <img src="../assets/images/face.jpg" alt="" />
@@ -36,7 +36,8 @@
 <script lang="ts" setup></script>
 <style lang="scss" module>
   .aboutMe {
-    padding-bottom: 50px;
+    background-color: #fff;
+    padding: 50px 20%;
     .aboutWrapper {
       display: flex;
       align-items: center;

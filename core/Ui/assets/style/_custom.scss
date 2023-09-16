@@ -5,6 +5,7 @@
 html {
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -19,6 +20,8 @@ body {
   overflow-x: hidden;
   background-color: #f8f9fa;
   font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 input,

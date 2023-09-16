@@ -1,7 +1,10 @@
 <template>
-  <div>
-    <router-view />
-  </div>
+  <Header />
+  <router-view />
+  <Footer />
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+  import Footer from '../components/Footer.vue';
+  import Header from '../components/Header.vue';
+</script>
