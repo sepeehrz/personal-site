@@ -11,12 +11,12 @@
       <li
         v-for="(item, index) in menu"
         :key="index"
-        @click="scrollTo(index + 1)">
-        <a
-          :href="item.element"
+        @click="activeMenu(index + 1)">
+        <router-link
+          :to="item.to"
           :class="[active === item.id ? $style.active : '']">
           {{ item.name }}
-        </a>
+        </router-link>
       </li>
     </ul>
     <div :class="$style.number">+989373389140</div>
@@ -30,30 +30,30 @@
     {
       id: 1,
       name: 'home',
-      element: '#home'
+      to: {name: 'Home', hash: '#banner'}
     },
     {
       id: 2,
       name: 'experience',
-      element: '#experience'
+      to: {name: 'Home', hash: '#experience'}
     },
     {
       id: 3,
       name: 'projects',
-      element: '#projects'
+      to: {name: 'Home', hash: '#projects'}
     },
     {
       id: 4,
       name: 'skills',
-      element: '#skills'
+      to: {name: 'Home', hash: '#skills'}
     },
     {
       id: 5,
       name: 'contact me',
-      element: '#contact-me'
+      to: {name: 'Home', hash: '#contact-me'}
     }
   ];
-  function scrollTo(menuIndex: number) {
+  function activeMenu(menuIndex: number) {
     active.value = menuIndex;
   }
 </script>
@@ -68,6 +68,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 60px;
     .number {
       color: $primary-text-color;
     }

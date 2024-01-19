@@ -60,7 +60,6 @@
           padding: 20px 0;
           font-size: 18px;
           line-height: 30px;
-          // text-align: left;
         }
         .list {
           width: 80%;

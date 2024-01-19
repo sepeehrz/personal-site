@@ -20,7 +20,8 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@core': fileURLToPath(new URL('./core', import.meta.url))
+      '@core': fileURLToPath(new URL('./core', import.meta.url)),
+      '@modules': fileURLToPath(new URL('./modules', import.meta.url))
     }
   }
 });

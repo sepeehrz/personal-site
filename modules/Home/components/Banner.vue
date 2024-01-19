@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.slider">
+  <div :class="$style.slider" id="banner">
     <div :class="$style.content">
       <div :class="$style.image">
         <img src="../assets/images/face.jpg" alt="" />
@@ -14,7 +14,9 @@
         <button :class="$style.cv">download CV</button>
       </div>
     </div>
-    <div :class="$style.arrow__down">
+    <div
+      :class="$style.arrow__down"
+      @click="$router.push({name: 'Home', hash: '#experience'})">
       <svgLoader name="arrow-down" />
     </div>
   </div>
@@ -74,6 +76,7 @@
       font-size: 40px;
       color: $white-color;
       animation: action 1s infinite alternate;
+      cursor: pointer;
     }
   }
   @keyframes action {

@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.skillsWrapper">
+  <div :class="$style.skillsWrapper" id="skills">
     <componentTitle title="skills" />
     <div :class="$style.skills">
       <div :class="$style.technical">

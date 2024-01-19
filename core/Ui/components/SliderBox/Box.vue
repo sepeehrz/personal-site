@@ -1,17 +1,14 @@
 <template>
   <div :class="$style.card">
     <div :class="$style.image"></div>
-    <div :class="$style.title">{{ data.title }}</div>
+    <div :class="$style.title" v-if="data.title">{{ data.title }}</div>
     <div :class="$style.details">{{ data.details }}</div>
-    <button
-      :class="$style.button"
-      @click="$router.push(`/project/${data.slug}`)">
-      details
-    </button>
+    <router-link :class="$style.button" :to="`/project/${data.slug}`">
+      Details
+    </router-link>
   </div>
 </template>
 <script lang="ts" setup>
-  import {computed} from 'vue';
   interface IData {
     title: string;
     details: string;
@@ -22,9 +19,9 @@
   }
   defineProps<IProps>();
 
-  const back = computed(() => {
-    return require('../../assets' + 'face.jpg');
-  });
+  const emits = defineEmits<{
+    (e: 'action'): void;
+  }>();
 </script>
 <style lang="scss" module>
   .card {
@@ -36,7 +33,7 @@
       width: 100%;
       height: 100%;
       background: linear-gradient(rgba(11, 5, 5, 0.5), rgba(34, 36, 35, 0.5)),
-        url(../../assets/images/face.jpg);
+        url(../../../../modules/Home/assets/images/face.jpg);
       border-radius: 10px;
       background-size: cover;
       filter: blur(1px);
@@ -75,6 +72,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      text-decoration: none;
     }
   }
 </style>

@@ -16,6 +16,16 @@ export function defineModule(setup: Module) {
 
 export const startApplication: Plugin = (app: App) => {
   const router = createRouter({
+    scrollBehavior(to) {
+      if (to.hash) {
+        return {
+          el: to.hash,
+          behavior: 'smooth'
+        };
+      }
+
+      return {top: 0};
+    },
     history: createWebHistory(),
     routes: []
   });

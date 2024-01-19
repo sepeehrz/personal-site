@@ -1,43 +1,47 @@
 <template>
-  <div :class="$style.projects">
-    <div :class="$style.slides">
-      <div :class="$style.name">Cashineh</div>
-      <div :class="$style.slider">
-        <Slider :images="images" />
-      </div>
-    </div>
-    <div :class="$style.description">
-      <div :class="$style.tags">
-        <h2>Cashineh</h2>
-        <span>website</span>
-      </div>
-      <div :class="$style.overview">
-        <h3>Overview</h3>
-        <p>
-          Professional software developer with 5+ years of experience in web
-          applications and game development. Delivers a number of innovative and
-          cutting-edge business solutions to a diverse group of clients within
-          the company's global reach. Focuses on project management and
-          production design skills to ensure that projects are completed on
-          time.
-        </p>
-      </div>
-      <div :class="$style.stack">
-        <h3>Stack</h3>
-        <div :class="$style.logo">
-          <div :class="$style.item" v-for="(item, index) in 12" :key="index">
-            <img src="../assets/svg/webpack.svg" />
-            webpack
-          </div>
+  <div :class="$style.wrapper">
+    <div :class="$style.projects">
+      <div :class="$style.slides">
+        <div :class="$style.name">Cashineh</div>
+        <div :class="$style.slider">
+          <Slider :images="images" />
         </div>
       </div>
-      <div :class="$style.button">
-        <a>Preview website</a>
+      <div :class="$style.description">
+        <div :class="$style.tags">
+          <h2>Cashineh</h2>
+          <span>website</span>
+        </div>
+        <div :class="$style.overview">
+          <h3>Overview</h3>
+          <p>
+            Professional software developer with 5+ years of experience in web
+            applications and game development. Delivers a number of innovative
+            and cutting-edge business solutions to a diverse group of clients
+            within the company's global reach. Focuses on project management and
+            production design skills to ensure that projects are completed on
+            time.
+          </p>
+        </div>
+        <div :class="$style.stack">
+          <h3>Stack</h3>
+          <div :class="$style.logo">
+            <div :class="$style.item" v-for="(item, index) in 12" :key="index">
+              <img src="../assets/svg/webpack.svg" />
+              webpack
+            </div>
+          </div>
+        </div>
+        <div :class="$style.button">
+          <a>Preview website</a>
+        </div>
       </div>
     </div>
+    <OtherProjects />
   </div>
 </template>
 <script lang="ts" setup>
+  import OtherProjects from './OtherProjects.vue';
   import Slider from './Slider.vue';
   const images = [
     '../assets/images/cashineh-home-page.jpg',
@@ -50,7 +54,7 @@
   .projects {
     display: flex;
     justify-content: space-between;
-    margin-top: 70px;
+    padding: 70px 15% 0;
     .slides {
       width: 40%;
       flex: 0 0 40%;

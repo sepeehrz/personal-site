@@ -3,6 +3,7 @@
     :class="$style.slider"
     slidesPerView="1"
     :pagination="true"
+    :grabCursor="true"
     :autoplay="{
       delay: 1500,
       pauseOnMouseEnter: true
