@@ -5,7 +5,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-  import sliderBox from '@core/Ui/components/SliderBox/Main.vue';
+  import sliderBox from '@ui/components/SliderBox/Main.vue';
   import {useProjectLists} from '../controller/Services/projectList';
 
   const {data} = useProjectLists();

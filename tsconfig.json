@@ -15,7 +15,8 @@
     "allowJs": false,
     "paths": {
       "@core/*": ["core/*"],
-      "@modules/*": ["modules/*"]
+      "@modules/*": ["modules/*"],
+      "@ui/*": ["ui/*"]
     }
   },
   "include": ["**/*.ts", "**/*.vue"],

@@ -29,7 +29,7 @@
   });
   const icon = computed(() => {
     return defineAsyncComponent(
-      () => import(`@core/Ui/assets/svg/${props.name}.svg`)
+      () => import(`@ui/assets/svg/${props.name}.svg`)
     );
   });
 </script>

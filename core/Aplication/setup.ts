@@ -1,7 +1,7 @@
 import {App, Plugin} from 'vue';
 import {createRouter, createWebHistory} from 'vue-router';
 import type {Router} from 'vue-router';
-import {uiProjectSetting} from '@core/Ui/index';
+import {uiProjectSetting} from '@ui/index';
 
 type ModuleSetupContext = {
   app: App;
