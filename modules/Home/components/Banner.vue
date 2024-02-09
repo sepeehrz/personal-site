@@ -1,16 +1,33 @@
 <template>
-  <div :class="$style.slider" id="banner">
-    <div :class="$style.content">
+  <div :class="$style.banner" id="banner">
+    <div :class="$style.content" class="container">
       <div :class="$style.image">
         <img src="../assets/images/face.jpg" alt="" />
       </div>
-      <div :class="$style.title">
-        <h1>sepehr zarghami</h1>
-        <h3>
-          i'm
-          <br />
-          Senior Software Developer
-        </h3>
+      <div :class="$style.description">
+        <h2>Software Developer</h2>
+        <div :class="$style.text">
+          Professional software developer with 5+ years of experience in web
+          applications and game development. Delivers a number of innovative and
+          cutting-edge business solutions to a diverse group of clients within
+          the company's global reach. Focuses on project management and
+          production design skills to ensure that projects are completed on
+          time.
+        </div>
+        <div :class="$style.list">
+          <div>
+            <span>Name: Sepehr Zarghami</span>
+            <span>Birthday: 14 Feb 1992</span>
+          </div>
+          <div>
+            <span>Degree: Master</span>
+            <span>Experience: 6 Years</span>
+          </div>
+          <div>
+            <span>Phone: +98 913 801 6954</span>
+            <span>Email: shamim.sanisales7@gmail.com</span>
+          </div>
+        </div>
         <button :class="$style.cv">download CV</button>
       </div>
     </div>
@@ -23,52 +40,83 @@
 </template>
 <script lang="ts" setup></script>
 <style lang="scss" module>
-  .slider {
-    height: 100vh;
+  .banner {
     background: linear-gradient(90deg, $primary-color 0, $secondary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 20px 0;
     position: relative;
-    .content {
+    @include media(md) {
+      height: 100vh;
       display: flex;
-      width: 50vw;
       align-items: center;
-      justify-content: space-between;
+      padding: 0;
+    }
+    .content {
       color: $white-color;
+      @include media(md) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
       .image {
-        width: 400px;
+        @include media(md) {
+          width: 40%;
+        }
         img {
-          max-width: 100%;
-          border-radius: 50%;
-          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+          width: 100%;
+          border-radius: 16px;
+          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
         }
       }
-      .title {
-        h1 {
-          font-size: 60px;
-          color: $primary-color;
-          -webkit-text-stroke: 1px $white-color;
-        }
+      .description {
         text-align: center;
-        h3 {
-          font-size: 30px;
+        margin-top: 30px;
+        @include media(md) {
+          width: 60%;
+          margin-top: 0;
+          padding-left: 20px;
+        }
+        @include media(lg) {
+          padding-left: 50px;
+        }
+        @include media(xl) {
+          padding-left: 100px;
         }
         .cv {
           background-color: $white-color;
-          color: $white-color;
           border: 1px solid $white-color;
-          border-radius: 10px;
+          border-radius: 26px;
           padding: 10px 20px;
           margin-top: 30px;
           color: $title-color;
+
           &:hover {
             cursor: pointer;
+          }
+        }
+        h2 {
+          font-size: 1.75rem;
+          color: $white-color;
+        }
+        .text {
+          padding: 20px 0;
+          font-size: 18px;
+          line-height: 30px;
+        }
+        .list {
+          @include media(md) {
+            width: 80%;
+          }
+          > div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 10px;
           }
         }
       }
     }
     .arrow__down {
+      display: none;
       position: absolute;
       bottom: 10px;
       left: 50%;
@@ -77,6 +125,10 @@
       color: $white-color;
       animation: action 1s infinite alternate;
       cursor: pointer;
+
+      @include media(md) {
+        display: block;
+      }
     }
   }
   @keyframes action {

@@ -69,6 +69,10 @@
     align-items: center;
     justify-content: space-between;
     height: 60px;
+    display: none;
+    @include media(md) {
+      display: block;
+    }
     .number {
       color: $primary-text-color;
     }

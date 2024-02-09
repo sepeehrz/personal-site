@@ -6,7 +6,7 @@ interface IData {
   image: string;
 }
 
-export function useProjectLists() {
+export function useProjects() {
   const data = ref<IData[]>([
     {
       slug: 'cashineh',

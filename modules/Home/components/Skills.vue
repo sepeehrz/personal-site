@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.skillsWrapper" id="skills">
+  <div :class="$style.skillsWrapper" id="skills" class="container">
     <componentTitle title="skills" />
     <div :class="$style.skills">
       <div :class="$style.technical">
@@ -42,9 +42,9 @@
 <script lang="ts" setup></script>
 <style lang="scss" module>
   .skillsWrapper {
+    padding-top: 50px;
     padding-bottom: 50px;
     background-color: #fff;
-    padding: 50px 20% 0;
     .skills {
       display: flex;
       justify-content: space-between;

@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.wrapper" id="experience">
+  <div :class="$style.wrapper" id="experience" class="container">
     <componentTitle title="quality" />
     <div :class="$style.knows">
       <div :class="$style.education">
@@ -78,17 +78,32 @@
 <script lang="ts" setup></script>
 <style lang="scss" module>
   .wrapper {
-    padding: 50px 20%;
     background-color: $white-color;
+    padding-top: 50px;
+    padding-bottom: 50px;
     .knows {
-      display: flex;
-      justify-content: space-between;
+      @include media(sm) {
+        display: flex;
+        justify-content: space-between;
+      }
       > div {
-        width: 50%;
+        width: 100%;
+        @include media(sm) {
+          width: 50%;
+        }
       }
       .experience {
+        text-align: center;
+
+        @include media(sm) {
+          text-align: left;
+        }
       }
       .education {
+        text-align: center;
+        @include media(sm) {
+          text-align: left;
+        }
       }
       .title {
         color: $title-color;
@@ -97,24 +112,39 @@
       }
       .items {
         margin-top: 50px;
-        border-left: 2px solid $primary-color;
         padding-left: 15px;
+        @include media(sm) {
+          border-left: 2px solid $primary-color;
+        }
+
         .box {
           margin-bottom: 20px;
+          &:not(:last-child) {
+            border-bottom: 2px solid $primary-color;
+            padding-bottom: 30px;
+          }
+          @include media(sm) {
+            &:not(:last-child) {
+              border-bottom: unset;
+              padding-bottom: 0;
+            }
+          }
           .boxTitle {
             font-size: 20px;
             font-weight: bold;
             position: relative;
             color: $title-color;
-            &::before {
-              content: '';
-              width: 15px;
-              height: 15px;
-              background-color: $primary-color;
-              position: absolute;
-              left: -23px;
-              top: 0;
-              border-radius: 50%;
+            @include media(sm) {
+              &::before {
+                content: '';
+                width: 15px;
+                height: 15px;
+                background-color: $primary-color;
+                position: absolute;
+                left: -23px;
+                top: 0;
+                border-radius: 50%;
+              }
             }
           }
           .company {

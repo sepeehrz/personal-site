@@ -53,8 +53,12 @@
     }
     .copyright {
       color: #fff;
-      font-size: 18px;
+      font-size: 15px;
       margin-top: 20px;
+      text-align: center;
+      @include media(sm) {
+        font-size: 18px;
+      }
       .name {
         font-weight: bold;
         color: #fff;

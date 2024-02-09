@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.contact" id="contact-me">
+  <div :class="$style.contact" id="contact-me" class="container">
     <componentTitle title="contact" />
     <div :class="$style.form">
       <div :class="$style.field">

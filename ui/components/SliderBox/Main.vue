@@ -1,7 +1,7 @@
 <template>
   <swiper-container
     v-if="data"
-    slidesPerView="3"
+    :slidesPerView="options.slidesPerView"
     :grabCursor="true"
     :pagination="{
       clickable: true
@@ -10,30 +10,17 @@
       delay: 2500,
       pauseOnMouseEnter: true
     }"
-    :breakpoints="{
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 30
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 30
-      }
-    }">
+    :breakpoints="options.breakpoints">
     <swiper-slide
       :class="$style.swiperItem"
       v-for="(item, index) in data"
       :key="index">
-      <Box :data="item" @action="emits('action')" />
+      <Box :data="item" />
     </swiper-slide>
   </swiper-container>
 </template>
 <script lang="ts" setup>
+  import {watch, ref} from 'vue';
   import Box from './Box.vue';
   import {register} from 'swiper/element/bundle';
 
@@ -47,12 +34,36 @@
   }
   interface IProps {
     data: IData[];
+    options?: any;
   }
-  defineProps<IProps>();
+  const props = withDefaults(defineProps<IProps>(), {
+    options: {
+      slidesPerView: '3',
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
 
-  const emits = defineEmits<{
-    (e: 'action'): void;
-  }>();
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        }
+      }
+    }
+  });
+  const options = ref(props.options);
+  watch(
+    () => props.options,
+    value => {
+      options.value = value;
+    },
+    {deep: true, immediate: true}
+  );
 </script>
 <style lang="scss" module>
   .swiperItem {

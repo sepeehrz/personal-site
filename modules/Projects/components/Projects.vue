@@ -2,10 +2,7 @@
   <div :class="$style.wrapper">
     <div :class="$style.projects">
       <div :class="$style.slides">
-        <div :class="$style.name">Cashineh</div>
-        <div :class="$style.slider">
-          <Slider :images="images" />
-        </div>
+        <Slider :images="images" />
       </div>
       <div :class="$style.description">
         <div :class="$style.tags">
@@ -52,21 +49,36 @@
 </script>
 <style lang="scss" module>
   .projects {
+    padding: 20px 2% 0;
     display: flex;
-    justify-content: space-between;
-    padding: 70px 15% 0;
+    flex-direction: column;
+    @include media(sm) {
+      padding: 70px 5% 0;
+    }
+    @include media(md) {
+      padding: 70px 10% 0;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @include media(xl) {
+      padding: 70px 15% 0;
+    }
     .slides {
-      width: 40%;
-      flex: 0 0 40%;
-      .name {
-        color: $secondary-color;
-        opacity: 0.2;
-        font-size: 5rem;
+      order: 2;
+      text-align: center;
+      @include media(md) {
+        width: 40%;
+        flex: 0 0 40%;
+        order: 1;
       }
     }
     .description {
-      width: 60%;
-      flex: 0 0 60%;
+      order: 1;
+      @include media(md) {
+        width: 60%;
+        flex: 0 0 60%;
+        order: 2;
+      }
       .tags {
         display: flex;
         h2 {

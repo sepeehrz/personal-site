@@ -1,0 +1,12 @@
+.container {
+  padding: 0 2%;
+  @include media(md) {
+    padding: 0 10%;
+  }
+  @include media(lg) {
+    padding: 0 15%;
+  }
+  @include media(xl) {
+    padding: 0 20%;
+  }
+}
