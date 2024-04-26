@@ -26,8 +26,8 @@
         <h3>Stack</h3>
         <div :class="$style.logo">
           <div :class="$style.item" v-for="(item, index) in 12" :key="index">
-            <img src="../assets/svg/webpack.svg" />
-            webpack
+            <svgLoader name="webpack" size="55" />
+            <div>webpack</div>
           </div>
         </div>
       </div>
@@ -44,10 +44,10 @@
   import OtherProjects from './OtherProjects.vue';
   import Slider from './Slider.vue';
   const images = [
-    '../assets/images/cashineh-home-page.jpg',
-    '../assets/images/cashineh-01.jpg',
-    '../assets/images/cashineh-02.jpg',
-    '../assets/images/cashineh-03.jpg'
+    'cashineh-home-page.jpg',
+    'cashineh-01.jpg',
+    'cashineh-02.jpg',
+    'cashineh-03.jpg'
   ];
 </script>
 <style lang="scss" module>
@@ -146,6 +146,7 @@
           flex-wrap: wrap;
           margin-top: 20px;
           .item {
+            text-align: center;
             margin-right: 10px;
             margin-top: 20px;
             color: $primary-text-color;

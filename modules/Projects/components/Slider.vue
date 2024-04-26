@@ -12,7 +12,7 @@
       :class="$style.slide"
       v-for="(item, index) in images"
       :key="index">
-      <img :src="url(item)" alt="" />
+      <img :src="url(item)" alt="images" />
     </swiper-slide>
   </swiper-container>
 </template>
@@ -25,7 +25,7 @@
   }
   defineProps<IProps>();
   function url(img: string) {
-    return new URL(`${img}`, import.meta.url).href;
+    return new URL(`../assets/images/${img}`, import.meta.url).href;
   }
 </script>
 <style lang="scss" module>

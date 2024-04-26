@@ -34,7 +34,7 @@
       width: 100%;
       height: 100%;
       background: linear-gradient(rgba(11, 5, 5, 0.5), rgba(34, 36, 35, 0.5)),
-        url(../../../../modules/Home/assets/images/skills.jpg);
+        url(@modules/Home/assets/images/skills.jpg);
       border-radius: 10px;
       background-size: cover;
       filter: blur(1px);
