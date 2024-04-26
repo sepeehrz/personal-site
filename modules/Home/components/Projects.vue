@@ -1,8 +1,7 @@
 <template>
-  <div class="container" id="projects">
-    <componentTitle title="Projects" />
+  <LayoutBox title="Projects" id="projects">
     <sliderBox :data="data" />
-  </div>
+  </LayoutBox>
 </template>
 <script lang="ts" setup>
   import sliderBox from '@ui/components/SliderBox/Main.vue';

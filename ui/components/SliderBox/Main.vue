@@ -1,5 +1,6 @@
 <template>
   <swiper-container
+    :class="$style.swiper"
     v-if="data"
     :slidesPerView="options.slidesPerView"
     :grabCursor="true"
@@ -49,8 +50,12 @@
           slidesPerView: 2,
           spaceBetween: 30
         },
-        1024: {
+        1280: {
           slidesPerView: 3,
+          spaceBetween: 30
+        },
+        1440: {
+          slidesPerView: 4,
           spaceBetween: 30
         }
       }

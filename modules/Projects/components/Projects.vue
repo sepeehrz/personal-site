@@ -1,41 +1,44 @@
 <template>
-  <div :class="$style.wrapper">
-    <div :class="$style.projects">
-      <div :class="$style.slides">
-        <Slider :images="images" />
+  <LayoutBox
+    :with-title="false"
+    :with-space="false"
+    :component-class="$style.projects">
+    <div :class="$style.slides">
+      <Slider :images="images" />
+    </div>
+    <div :class="$style.description">
+      <div :class="$style.tags">
+        <h2>Cashineh</h2>
+        <span>website</span>
       </div>
-      <div :class="$style.description">
-        <div :class="$style.tags">
-          <h2>Cashineh</h2>
-          <span>website</span>
-        </div>
-        <div :class="$style.overview">
-          <h3>Overview</h3>
-          <p>
-            Professional software developer with 5+ years of experience in web
-            applications and game development. Delivers a number of innovative
-            and cutting-edge business solutions to a diverse group of clients
-            within the company's global reach. Focuses on project management and
-            production design skills to ensure that projects are completed on
-            time.
-          </p>
-        </div>
-        <div :class="$style.stack">
-          <h3>Stack</h3>
-          <div :class="$style.logo">
-            <div :class="$style.item" v-for="(item, index) in 12" :key="index">
-              <img src="../assets/svg/webpack.svg" />
-              webpack
-            </div>
+      <div :class="$style.overview">
+        <h3>Overview</h3>
+        <p>
+          Professional software developer with 5+ years of experience in web
+          applications and game development. Delivers a number of innovative and
+          cutting-edge business solutions to a diverse group of clients within
+          the company's global reach. Focuses on project management and
+          production design skills to ensure that projects are completed on
+          time.
+        </p>
+      </div>
+      <div :class="$style.stack">
+        <h3>Stack</h3>
+        <div :class="$style.logo">
+          <div :class="$style.item" v-for="(item, index) in 12" :key="index">
+            <img src="../assets/svg/webpack.svg" />
+            webpack
           </div>
         </div>
-        <div :class="$style.button">
-          <a>Preview website</a>
-        </div>
+      </div>
+      <div :class="$style.button">
+        <a>Preview website</a>
       </div>
     </div>
+  </LayoutBox>
+  <LayoutBox :with-title="false">
     <OtherProjects />
-  </div>
+  </LayoutBox>
 </template>
 <script lang="ts" setup>
   import OtherProjects from './OtherProjects.vue';
@@ -49,19 +52,11 @@
 </script>
 <style lang="scss" module>
   .projects {
-    padding: 20px 2% 0;
     display: flex;
     flex-direction: column;
-    @include media(sm) {
-      padding: 70px 5% 0;
-    }
     @include media(md) {
-      padding: 70px 10% 0;
       flex-direction: row;
       justify-content: space-between;
-    }
-    @include media(xl) {
-      padding: 70px 15% 0;
     }
     .slides {
       order: 2;
@@ -74,10 +69,21 @@
     }
     .description {
       order: 1;
+      padding: 30px 5px;
+      @include media(sm) {
+        padding: 30px 20px;
+      }
       @include media(md) {
         width: 60%;
         flex: 0 0 60%;
         order: 2;
+      }
+
+      @include media(lg) {
+        padding: 30px 40px;
+      }
+      @include media(xl) {
+        padding: 30px 60px;
       }
       .tags {
         display: flex;

@@ -1,31 +1,20 @@
 <template>
-  <div :class="$style.header">
-    <div :class="$style.name">
-      <svgLoader name="s" />
-      <div>
-        <div :class="$style.firstName">sepehr</div>
-        <div :class="$style.lastName">zarghami</div>
-      </div>
-    </div>
+  <LayoutBox
+    :with-title="false"
+    :with-space="false"
+    :component-class="$style.header">
     <ul :class="$style.menu">
-      <li
-        v-for="(item, index) in menu"
-        :key="index"
-        @click="activeMenu(index + 1)">
+      <li v-for="(item, index) in menu" :key="index">
         <router-link
           :to="item.to"
-          :class="[active === item.id ? $style.active : '']">
+          :class="[$route.hash === item.to.hash ? $style.active : '']">
           {{ item.name }}
         </router-link>
       </li>
     </ul>
-    <div :class="$style.number">+989373389140</div>
-  </div>
+  </LayoutBox>
 </template>
 <script lang="ts" setup>
-  import {ref} from 'vue';
-  const active = ref(1);
-
   const menu = [
     {
       id: 1,
@@ -53,78 +42,60 @@
       to: {name: 'Home', hash: '#contact-me'}
     }
   ];
-  function activeMenu(menuIndex: number) {
-    active.value = menuIndex;
-  }
 </script>
 <style lang="scss" module>
   .header {
-    position: fixed;
-    top: 0;
-    padding: 0 50px;
-    background: linear-gradient(90deg, $primary-color 0, $secondary-color);
     width: 100%;
-    z-index: 10;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 60px;
-    display: none;
-    @include media(md) {
-      display: block;
-    }
-    .number {
-      color: $primary-text-color;
-    }
-    .name {
-      display: flex;
-      color: $primary-text-color;
-      > div {
-        margin-left: 10px;
-      }
-      .firstName {
-        font-size: 12px;
-      }
-      .lastName {
-        font-size: 15px;
-        padding-left: 5px;
-      }
+    @include media(sm) {
+      padding: 0 50px;
     }
     .menu {
       display: flex;
       align-items: center;
       list-style-type: none;
+      padding: 0;
       li {
         a {
-          color: $primary-text-color;
-          margin: 0 15px;
+          color: $black-color;
+          margin: 0 5px;
           padding-bottom: 5px;
           cursor: pointer;
-          font-size: 16px;
+          font-size: 14px;
           position: relative;
           text-decoration: none;
+          @include media(325) {
+            margin: 0 10px;
+          }
+          @include media(sm) {
+            margin: 0 15px;
+            font-size: 16px;
+          }
           &:hover {
-            color: $white-color;
+            color: $primary-color;
             &::after {
               content: '';
               width: 100%;
               height: 2px;
               position: absolute;
               display: block;
-              background: $white-color;
+              background: $primary-color;
               bottom: -3px;
               left: 0;
             }
           }
           &.active {
-            color: $white-color;
+            color: $primary-color;
             &::after {
               content: '';
               width: 100%;
               height: 2px;
               position: absolute;
               display: block;
-              background: $white-color;
+              background: $primary-color;
               bottom: -3px;
               left: 0;
             }

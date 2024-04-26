@@ -1,6 +1,5 @@
 <template>
-  <div :class="$style.contact" id="contact-me" class="container">
-    <componentTitle title="contact" />
+  <LayoutBox title="Contact" :component-class="$style.contact" id="contact-me">
     <div :class="$style.form">
       <div :class="$style.field">
         <span>Name</span>
@@ -17,7 +16,7 @@
         placeholder="Write your text" />
       <button :class="$style.send">send message</button>
     </div>
-  </div>
+  </LayoutBox>
 </template>
 <script lang="ts" setup></script>
 <style lang="scss" module>
