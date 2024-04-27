@@ -6,8 +6,15 @@
 <script lang="ts" setup>
   import {ref} from 'vue';
   import sliderBox from '@ui/components/SliderBox/Main.vue';
-  import {useProjects} from '@modules/Home/controller/composables/projects';
-  const {data} = useProjects();
+  interface IData {
+    title: string;
+    details: string;
+    slug: string;
+  }
+  interface IProps {
+    data: IData[];
+  }
+  defineProps<IProps>();
 
   const options = ref({
     slidesPerView: '4',

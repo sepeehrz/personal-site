@@ -7,11 +7,13 @@
     <div :class="$style.description">
       <h2 :class="$style.title">About Me:</h2>
       <div :class="$style.text">
-        Professional software developer with 5+ years of experience in web
-        applications and game development. Delivers a number of innovative and
-        cutting-edge business solutions to a diverse group of clients within the
-        company's global reach. Focuses on project management and production
-        design skills to ensure that projects are completed on time.
+        I have been working professionally in the programming field for almost
+        5+ years. I have experience in implementing, developing and maintaining
+        the projects of different companies. my main framework is vuejs and
+        nuxtjs, and I have good experience in using these frameworks and tools
+        related to them. I am sending you my resume to gain new experience and
+        be effective in the company's progress. Hoping that we can work together
+        and make a good experience.
       </div>
       <h2 :class="$style.title">Information:</h2>
       <div :class="$style.information">

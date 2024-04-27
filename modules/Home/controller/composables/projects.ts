@@ -1,83 +1,137 @@
 import {ref} from 'vue';
+interface IStacks {
+  name: string;
+  icon: string;
+}
 interface IData {
   title: string;
   details: string;
   slug: string;
-  image: string;
+  images: string[];
+  tags: string[];
+  stacks: IStacks[];
+  withPreview: boolean;
 }
 
 export function useProjects() {
   const data = ref<IData[]>([
     {
       slug: 'cashineh',
-      image: '../../assets/images/skills.jpg',
       title: 'cashineh',
       details:
-        'Professional software developer with 5+ years of experience in web applications and game development. Delivers a number of innovative and cutting-edge business soluti'
+        'Shop from your favorite store through cashineh. When you buy from different stores through cashineh, after the store is approved, part of the amount you pay will be returned to your user account in cashineh.',
+      images: [
+        'cashineh-home-page.jpg',
+        'cashineh-01.jpg',
+        'cashineh-02.jpg',
+        'cashineh-03.jpg'
+      ],
+      tags: ['website'],
+      stacks: [
+        {
+          name: 'webpack',
+          icon: 'webpack'
+        }
+      ],
+      withPreview: false
     },
     {
-      slug: 'cashineh',
-      image: '../../assets/images/skills.jpg',
-      title: 'cashineh',
+      slug: 'cashineh2',
+      title: 'cashineh2',
       details:
-        'Professional software developer with 5+ years of experience in web applications and game development. Delivers a number of innovative and cutting-edge business soluti'
+        'Shop from your favorite store through cashineh. When you buy from different stores through cashineh, after the store is approved, part of the amount you pay will be returned to your user account in cashineh.',
+      images: [
+        'cashineh-home-page.jpg',
+        'cashineh-01.jpg',
+        'cashineh-02.jpg',
+        'cashineh-03.jpg'
+      ],
+      tags: ['website'],
+      stacks: [
+        {
+          name: 'webpack',
+          icon: 'webpack'
+        }
+      ],
+      withPreview: false
     },
     {
-      slug: 'cashineh',
-      image: '../../assets/images/skills.jpg',
-      title: 'cashineh',
+      slug: 'resa',
+      title: 'resa',
       details:
-        'Professional software developer with 5+ years of experience in web applications and game development. Delivers a number of innovative and cutting-edge business soluti'
-    },
-    {
-      slug: 'cashineh',
-      image: '',
-      title: 'cashineh',
-      details:
-        'Professional software developer with 5+ years of experience in web applications and game development. Delivers a number of innovative and cutting-edge business soluti'
-    },
-    {
-      slug: 'cashineh',
-      image: '',
-      title: 'cashineh',
-      details:
-        'Professional software developer with 5+ years of experience in web applications and game development. Delivers a number of innovative and cutting-edge business soluti'
-    },
-    {
-      slug: 'cashineh',
-      image: '',
-      title: 'cashineh',
-      details:
-        'Professional software developer with 5+ years of experience in web applications and game development. Delivers a number of innovative and cutting-edge business soluti'
-    },
-    {
-      slug: 'cashineh',
-      image: '',
-      title: 'cashineh',
-      details:
-        'Professional software developer with 5+ years of experience in web applications and game development. Delivers a number of innovative and cutting-edge business soluti'
-    },
-    {
-      slug: 'cashineh',
-      image: '',
-      title: 'cashineh',
-      details:
-        'Professional software developer with 5+ years of experience in web applications and game development. Delivers a number of innovative and cutting-edge business soluti'
-    },
-    {
-      slug: 'cashineh',
-      image: '',
-      title: 'cashineh',
-      details:
-        'Professional software developer with 5+ years of experience in web applications and game development. Delivers a number of innovative and cutting-edge business soluti'
-    },
-    {
-      slug: 'cashineh',
-      image: '',
-      title: 'cashineh',
-      details:
-        'Professional software developer with 5+ years of experience in web applications and game development. Delivers a number of innovative and cutting-edge business soluti'
+        'Shop from your favorite store through cashineh. When you buy from different stores through cashineh, after the store is approved, part of the amount you pay will be returned to your user account in cashineh.',
+      images: [
+        'cashineh-home-page.jpg',
+        'cashineh-01.jpg',
+        'cashineh-02.jpg',
+        'cashineh-03.jpg'
+      ],
+      tags: ['website'],
+      stacks: [
+        {
+          name: 'webpack',
+          icon: 'webpack'
+        }
+      ],
+      withPreview: false
     }
+    // {
+    //   slug: 'cashineh',
+
+    //   title: 'cashineh',
+    //   details:
+    //     'Professional software developer with 5+ years of experience in web applications and game development. Delivers a number of innovative and cutting-edge business soluti'
+    // },
+    // {
+    //   slug: 'cashineh',
+
+    //   title: 'cashineh',
+    //   details:
+    //     'Professional software developer with 5+ years of experience in web applications and game development. Delivers a number of innovative and cutting-edge business soluti'
+    // },
+    // {
+    //   slug: 'cashineh',
+
+    //   title: 'cashineh',
+    //   details:
+    //     'Professional software developer with 5+ years of experience in web applications and game development. Delivers a number of innovative and cutting-edge business soluti'
+    // },
+    // {
+    //   slug: 'cashineh',
+    //   title: 'cashineh',
+    //   details:
+    //     'Professional software developer with 5+ years of experience in web applications and game development. Delivers a number of innovative and cutting-edge business soluti'
+    // },
+    // {
+    //   slug: 'cashineh',
+    //   title: 'cashineh',
+    //   details:
+    //     'Professional software developer with 5+ years of experience in web applications and game development. Delivers a number of innovative and cutting-edge business soluti'
+    // },
+    // {
+    //   slug: 'cashineh',
+    //   title: 'cashineh',
+    //   details:
+    //     'Professional software developer with 5+ years of experience in web applications and game development. Delivers a number of innovative and cutting-edge business soluti'
+    // },
+    // {
+    //   slug: 'cashineh',
+    //   title: 'cashineh',
+    //   details:
+    //     'Professional software developer with 5+ years of experience in web applications and game development. Delivers a number of innovative and cutting-edge business soluti'
+    // },
+    // {
+    //   slug: 'cashineh',
+    //   title: 'cashineh',
+    //   details:
+    //     'Professional software developer with 5+ years of experience in web applications and game development. Delivers a number of innovative and cutting-edge business soluti'
+    // },
+    // {
+    //   slug: 'cashineh',
+    //   title: 'cashineh',
+    //   details:
+    //     'Professional software developer with 5+ years of experience in web applications and game development. Delivers a number of innovative and cutting-edge business soluti'
+    // }
   ]);
   return {data};
 }

@@ -4,51 +4,62 @@
     :with-space="false"
     :component-class="$style.projects">
     <div :class="$style.slides">
-      <Slider :images="images" />
+      <Slider :images="currentProject.images" />
     </div>
     <div :class="$style.description">
       <div :class="$style.tags">
-        <h2>Cashineh</h2>
-        <span>website</span>
+        <h2>{{ currentProject.title }}</h2>
+        <span v-for="(tag, tagIndex) in currentProject.tags" :key="tagIndex">
+          {{ tag }}
+        </span>
       </div>
       <div :class="$style.overview">
         <h3>Overview</h3>
         <p>
-          Professional software developer with 5+ years of experience in web
-          applications and game development. Delivers a number of innovative and
-          cutting-edge business solutions to a diverse group of clients within
-          the company's global reach. Focuses on project management and
-          production design skills to ensure that projects are completed on
-          time.
+          {{ currentProject.details }}
         </p>
       </div>
       <div :class="$style.stack">
         <h3>Stack</h3>
         <div :class="$style.logo">
-          <div :class="$style.item" v-for="(item, index) in 12" :key="index">
-            <svgLoader name="webpack" size="55" />
-            <div>webpack</div>
+          <div
+            :class="$style.item"
+            v-for="(item, index) in currentProject.stacks"
+            :key="index">
+            <svgLoader :name="item.icon" size="55" />
+            <div>{{ item.name }}</div>
           </div>
         </div>
       </div>
-      <div :class="$style.button">
+      <div :class="$style.button" v-if="currentProject.withPreview">
         <a>Preview website</a>
       </div>
     </div>
   </LayoutBox>
   <LayoutBox :with-title="false">
-    <OtherProjects />
+    <OtherProjects :data="otherProjects" />
   </LayoutBox>
 </template>
 <script lang="ts" setup>
-  import OtherProjects from './OtherProjects.vue';
+  import {computed} from 'vue';
   import Slider from './Slider.vue';
-  const images = [
-    'cashineh-home-page.jpg',
-    'cashineh-01.jpg',
-    'cashineh-02.jpg',
-    'cashineh-03.jpg'
-  ];
+  import {useRoute} from 'vue-router';
+  import OtherProjects from './OtherProjects.vue';
+  import {useProjects} from '@modules/Home/controller/composables/projects';
+
+  const {data} = useProjects();
+  const $route = useRoute();
+
+  const currentProject = computed(() => {
+    const filterSlug = data.value.filter(
+      item => item.slug === $route.params.id
+    );
+    return Object.assign({}, ...filterSlug);
+  });
+
+  const otherProjects = computed(() => {
+    return data.value.filter(item => item.slug !== currentProject.value.slug);
+  });
 </script>
 <style lang="scss" module>
   .projects {

@@ -31,7 +31,6 @@
     title: string;
     details: string;
     slug: string;
-    image: string;
   }
   interface IProps {
     data: IData[];
