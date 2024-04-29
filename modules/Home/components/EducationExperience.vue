@@ -83,7 +83,10 @@
         <div :class="$style.box">
           <div :class="$style.boxTitle">Frontend Developer</div>
           <div :class="$style.company">
-            <a href="/vrwebdesign.ir" target="_blank" :class="$style.name">
+            <a
+              href="https://vrwebdesign.ir"
+              target="_blank"
+              :class="$style.name">
               Vrwebdesign
             </a>
             <span :class="$style.date">| Aug 2019 - Jul 2021</span>

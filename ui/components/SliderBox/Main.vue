@@ -52,10 +52,6 @@
         1280: {
           slidesPerView: 3,
           spaceBetween: 30
-        },
-        1440: {
-          slidesPerView: 4,
-          spaceBetween: 30
         }
       }
     }

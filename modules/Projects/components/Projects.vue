@@ -3,7 +3,7 @@
     :with-title="false"
     :with-space="false"
     :component-class="$style.projects">
-    <div :class="$style.slides">
+    <div v-if="currentProject.withSlider" :class="$style.slides">
       <Slider :images="currentProject.images" />
     </div>
     <div :class="$style.description">
