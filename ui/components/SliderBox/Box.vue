@@ -53,9 +53,14 @@
       position: absolute;
       left: 10px;
       top: 70px;
-      font-size: 16px;
+      font-size: convertPxToRem(16);
       padding-top: 10px;
       line-height: 20px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 7;
+      -webkit-box-orient: vertical;
       color: $white-color;
     }
     .button {

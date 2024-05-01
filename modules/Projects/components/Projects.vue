@@ -6,6 +6,7 @@
     <div v-if="currentProject.withSlider" :class="$style.slides">
       <Slider :images="currentProject.images" />
     </div>
+    <div v-else :class="[$style.slides, $style.noPhoto]">No Photo</div>
     <div :class="$style.description">
       <div :class="$style.tags">
         <h2>{{ currentProject.title }}</h2>
@@ -32,7 +33,7 @@
         </div>
       </div>
       <div :class="$style.button" v-if="currentProject.withPreview">
-        <a>Preview website</a>
+        <a :href="currentProject.link" target="_blank">Preview website</a>
       </div>
     </div>
   </LayoutBox>
@@ -68,6 +69,18 @@
     @include media(md) {
       flex-direction: row;
       justify-content: space-between;
+    }
+    .noPhoto {
+      background-color: #ccc;
+      border-radius: 0 0 10px 10px;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      @include media(md) {
+        border-radius: 10px 0 0 10px;
+      }
     }
     .slides {
       order: 2;
@@ -177,6 +190,8 @@
           text-align: center;
           cursor: pointer;
           font-size: 20px;
+          color: #fff;
+          text-decoration: none;
         }
       }
     }

@@ -7,6 +7,7 @@ interface IData {
   title: string;
   details: string;
   slug: string;
+  link?: string;
   images?: string[];
   tags: string[];
   stacks: IStacks[];
@@ -48,6 +49,14 @@ export function useProjects() {
           icon: 'bootstrap'
         },
         {
+          name: 'Javascript',
+          icon: 'javascript'
+        },
+        {
+          name: 'Typescript',
+          icon: 'typescript'
+        },
+        {
           name: 'Angularjs',
           icon: 'angular'
         },
@@ -74,10 +83,11 @@ export function useProjects() {
       ]
     },
     {
-      withPreview: false,
+      withPreview: true,
       withSlider: true,
       slug: 'ressa',
       title: 'Ressa',
+      link: 'https://resaa.net',
       details:
         'The formation of the Rasa system began in 2016. Rasa came into existence when the mother of one of its founders, who happened to be a doctor herself, came and raised the problem of being in a relationship with her patient, and this caused some graduates of Tehran University and Sharif Industrial to think about Rasa. to bring about During this time, Rasa has tried to establish a reliable communication between the doctor and the patient on the telephone platform, and has always considered his main values, which are serving in the field of health and protecting peoples privacy, as his mission. Rasti Rasa is owned by Danesh Baniyan Green and Silver Leaves Company and has the necessary licenses from the Ministry of Industry, Mines and Trade and the Ministry of Guidance. Rasa is proud of the fact that there are many well-known and experienced doctors in its collection of doctors, and it has made it possible for everyone to communicate with these doctors.',
       images: [
@@ -106,6 +116,14 @@ export function useProjects() {
           icon: 'bootstrap'
         },
         {
+          name: 'Javascript',
+          icon: 'javascript'
+        },
+        {
+          name: 'Typescript',
+          icon: 'typescript'
+        },
+        {
           name: 'Vue',
           icon: 'vue'
         },
@@ -132,10 +150,11 @@ export function useProjects() {
       ]
     },
     {
-      withPreview: false,
+      withPreview: true,
       withSlider: true,
       slug: 'rasha',
       title: 'Rasha',
+      link: 'https://web.rasha.app',
       details:
         'Rasha is a power bank rental service for charging mobile batteries and other accessories. With Rasha, you wont have to worry about your mobile phone being low. It is enough to get a power bank from one of the Rasha stations and take it with you. Rasha will be with you all day in work and life. When you are done, return the Rasha to one of the stations or exchange it with another fully charged power bank. Everything is done easily in the Rasha application. Through it, you can find the nearest station and even find out about the news or good events that happen in our partner stores.',
       images: [
@@ -157,6 +176,14 @@ export function useProjects() {
         {
           name: 'Sass',
           icon: 'sass'
+        },
+        {
+          name: 'Javascript',
+          icon: 'javascript'
+        },
+        {
+          name: 'Typescript',
+          icon: 'typescript'
         },
         {
           name: 'Vue',
@@ -181,14 +208,15 @@ export function useProjects() {
       ]
     },
     {
-      withPreview: false,
+      withPreview: true,
       withSlider: true,
       slug: 'mekappa',
       title: 'Mekappa',
+      link: 'https://mekappa.ir',
       details: 'Online shop for selling kitchen appliances',
       images: [
         'mekapa/mekapa-1.jpg',
-        'mekapa/mekapa-2.png',
+        'mekapa/mekapa-2.jpg',
         'mekapa/mekapa-3.jpg',
         'mekapa/mekapa-4.jpg'
       ],
@@ -205,6 +233,14 @@ export function useProjects() {
         {
           name: 'Sass',
           icon: 'sass'
+        },
+        {
+          name: 'Javascript',
+          icon: 'javascript'
+        },
+        {
+          name: 'Typescript',
+          icon: 'typescript'
         },
         {
           name: 'Vue',
@@ -240,6 +276,18 @@ export function useProjects() {
         {
           name: 'Sass',
           icon: 'sass'
+        },
+        {
+          name: 'Vuetify',
+          icon: 'vuetify'
+        },
+        {
+          name: 'Javascript',
+          icon: 'javascript'
+        },
+        {
+          name: 'Typescript',
+          icon: 'typescript'
         },
         {
           name: 'Vue',
@@ -289,6 +337,18 @@ export function useProjects() {
           icon: 'sass'
         },
         {
+          name: 'Vuetify',
+          icon: 'vuetify'
+        },
+        {
+          name: 'Javascript',
+          icon: 'javascript'
+        },
+        {
+          name: 'Typescript',
+          icon: 'typescript'
+        },
+        {
           name: 'Vue',
           icon: 'vue'
         },
@@ -296,6 +356,7 @@ export function useProjects() {
           name: 'Nuxt',
           icon: 'nuxt'
         },
+
         {
           name: 'Mysql',
           icon: 'mysql'
@@ -311,6 +372,143 @@ export function useProjects() {
         {
           name: 'webpack',
           icon: 'webpack'
+        }
+      ]
+    },
+    {
+      withPreview: true,
+      withSlider: true,
+      slug: 'gapfilm',
+      title: 'Gapfilm',
+      link: 'https://www.gapfilm.ir/',
+      details:
+        'It is a large bank of the latest series and movies of the world, as well as a complete archive of old movies and series, which are presented in the form of subtitles and exclusive dubbing of Gapfilm.',
+      tags: ['website', 'pwa', 'landing', 'panel'],
+      images: ['gapfilm/gapfilm-1.png', 'gapfilm/gapfilm-2.png'],
+      stacks: [
+        {
+          name: 'Html',
+          icon: 'html'
+        },
+        {
+          name: 'Css',
+          icon: 'css'
+        },
+        {
+          name: 'Sass',
+          icon: 'sass'
+        },
+        {
+          name: 'Bootstrap',
+          icon: 'bootstrap'
+        },
+
+        {
+          name: 'Javascript',
+          icon: 'javascript'
+        },
+        {
+          name: 'Vue',
+          icon: 'vue'
+        },
+        {
+          name: 'Nuxt',
+          icon: 'nuxt'
+        },
+        {
+          name: 'webpack',
+          icon: 'webpack'
+        }
+      ]
+    },
+    {
+      withPreview: true,
+      withSlider: true,
+      slug: 'lendroll-panel',
+      title: 'Lendroll Panel',
+      link: 'https://admin.lendroll.ir',
+      details:
+        'An admin panel for the Lendroll project, which is used for the bank and organization and the Lendroll admin to manage information.',
+      tags: ['panel'],
+      images: [
+        'lendroll/lendroll-pannel-1.png',
+        'lendroll/lendroll-pannel-2.png',
+        'lendroll/lendroll-pannel-3.png',
+        'lendroll/lendroll-pannel-4.png'
+      ],
+      stacks: [
+        {
+          name: 'Html',
+          icon: 'html'
+        },
+        {
+          name: 'Css',
+          icon: 'css'
+        },
+        {
+          name: 'Sass',
+          icon: 'sass'
+        },
+        {
+          name: 'Javascript',
+          icon: 'javascript'
+        },
+        {
+          name: 'Typescript',
+          icon: 'typescript'
+        },
+        {
+          name: 'Vue',
+          icon: 'vue'
+        },
+        {
+          name: 'Vite',
+          icon: 'vite'
+        }
+      ]
+    },
+    {
+      withPreview: true,
+      withSlider: true,
+      slug: 'lendroll-app',
+      title: 'Lendroll App',
+      link: 'https://app.lendroll.ir',
+      details:
+        'An application for the employees of organizations that are parties to the contract of lendroll, who can use the facilities of the contract and the facilities of lendroll',
+      tags: ['pwa'],
+      images: ['lendroll/lendroll-app.png'],
+      stacks: [
+        {
+          name: 'Html',
+          icon: 'html'
+        },
+        {
+          name: 'Css',
+          icon: 'css'
+        },
+        {
+          name: 'Sass',
+          icon: 'sass'
+        },
+        {
+          name: 'Javascript',
+          icon: 'javascript'
+        },
+        {
+          name: 'Typescript',
+          icon: 'typescript'
+        },
+        {
+          name: 'Vue',
+          icon: 'vue'
+        },
+        {
+          name: 'Pwa',
+          icon: 'pwa'
+        },
+        {
+          name: 'Vite',
+          icon: 'vite'
         }
       ]
     }
