@@ -1,30 +1,33 @@
-# sepeehrz
+## About this repository
 
-This template should help get you started developing with Vue 3 in Vite.
+This repository is related to my personal site, which shows my resume. In this repository, I tried to use a clean architecture, which is written in a modular way.
 
-## Recommended IDE Setup
+## Languages,Tools,Technology
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- Html
+- Scss
+- Javascript
+- TypeScript
+- Vue 3
+- Swiper
+- Vite
 
 ## Project Setup
 
 ```sh
 npm install
+```
+
+Or
+
+```sh
+yarn install
+```
+
+Or
+
+```sh
+pnpm install
 ```
 
 ### Compile and Hot-Reload for Development
@@ -33,8 +36,32 @@ npm install
 npm run dev
 ```
 
+Or
+
+```sh
+yarn dev
+```
+
 ### Type-Check, Compile and Minify for Production
 
 ```sh
 npm run build
+```
+
+Or
+
+```sh
+yarn build
+```
+
+### Preview for Production
+
+```sh
+npm run preview
+```
+
+Or
+
+```sh
+yarn preview
 ```

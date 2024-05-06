@@ -25,11 +25,4 @@ export default defineConfig({
       '@app': fileURLToPath(new URL('./src/app', import.meta.url))
     }
   }
-  // resolve: {
-  //   alias: {
-  //     '@core': fileURLToPath(new URL('./core', import.meta.url)),
-  //     '@modules': fileURLToPath(new URL('./modules', import.meta.url)),
-  //     '@ui': fileURLToPath(new URL('./ui', import.meta.url))
-  //   }
-  // }
 });
