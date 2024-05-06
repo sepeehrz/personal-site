@@ -1,6 +1,6 @@
-import {defineModule} from '@core/Aplication/setup';
 import './assets/style/app.scss';
 import {setupComponents} from './components';
+import {defineModule} from '@app/application/setup';
 
 export const uiProjectSetting = defineModule(({app, router}) => {
   setupComponents(app);

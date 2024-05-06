@@ -4,7 +4,7 @@ import componentTitle from './components/title.vue';
 import LayoutBox from './components/layoutBox.vue';
 
 export function setupComponents(app: App) {
-  [svgLoader, componentTitle, LayoutBox].forEach(component => {
+  [svgLoader, componentTitle, LayoutBox].forEach((component: any) => {
     app.component(component.name, component);
   });
 }

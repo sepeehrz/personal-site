@@ -52,7 +52,7 @@
         background-image: url(../assets/images/skills.jpg);
         background-repeat: no-repeat;
         background-size: 100% 100%;
-        height: 500px;
+        height: 536px;
         border-radius: 10px 0 0 10px;
         width: 40%;
       }

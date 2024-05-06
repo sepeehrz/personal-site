@@ -32,7 +32,6 @@
       width: 40%;
       img {
         width: 100%;
-        // object-fit: contain;
       }
     }
     .text {

@@ -5,7 +5,7 @@
 </template>
 <script lang="ts" setup>
   import {ref} from 'vue';
-  import sliderBox from '@ui/components/SliderBox/Main.vue';
+  import sliderBox from '@app/ui/components/SliderBox/Main.vue';
   interface IData {
     title: string;
     details: string;

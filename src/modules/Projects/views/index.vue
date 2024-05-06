@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <Projects />
-  </div>
+  <Projects />
 </template>
 <script lang="ts" setup>
   import Projects from '../components/Projects.vue';

@@ -1,9 +1,9 @@
-import {defineModule} from '@core/Aplication/setup';
+import {defineModule} from '@app/application/setup';
 
 export default defineModule(({router}) => {
   router.addRoute('main', {
-    name: 'Project',
-    path: 'project/:id',
+    name: 'Home',
+    path: '',
     component: () => import('./views/index.vue')
   });
 });

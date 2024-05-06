@@ -1,7 +1,7 @@
 import {App, Plugin} from 'vue';
-import {createRouter, createWebHistory} from 'vue-router';
 import type {Router} from 'vue-router';
-import {uiProjectSetting} from '@ui/index';
+import {uiProjectSetting} from '@app/ui/index';
+import {createRouter, createWebHistory} from 'vue-router';
 
 type ModuleSetupContext = {
   app: App;
@@ -37,7 +37,9 @@ export const startApplication: Plugin = (app: App) => {
 
   uiProjectSetting(context);
 
-  const modulesPaths: any = import.meta.globEager('../../modules/*/index.ts');
+  const modulesPaths: any = import.meta.glob('../../modules/*/index.ts', {
+    eager: true
+  });
 
   for (const path in modulesPaths) {
     const setup = modulesPaths[path].default as Module | undefined;

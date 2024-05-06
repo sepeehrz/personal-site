@@ -4,7 +4,7 @@
   </LayoutBox>
 </template>
 <script lang="ts" setup>
-  import sliderBox from '@ui/components/SliderBox/Main.vue';
+  import sliderBox from '@app/ui/components/SliderBox/Main.vue';
   import {useProjects} from '../controller/composables/projects';
 
   const {data} = useProjects();
